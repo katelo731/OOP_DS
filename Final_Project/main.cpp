@@ -12,7 +12,7 @@
 // Please implement RBTree class in separate header and cpp file (RBTree.h and RBTree.cpp)          //
 // And you should not modify any codes in main.cpp file.                                                //
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-#include "RBTree.h"
+// #include "RBTree.h"
 
 using namespace std;
 
@@ -57,10 +57,9 @@ int main()
 {
     /** 
     RBTree is the class implemented by yourself, 2 member functions you need to implement as belows:
-        1. insert(key, gender, height, weight) : add data into your RBTree and return pair<int, bool>
-            Returned pair<int, bool>:
-                The pair::first set to an index of the newly inserted element or index of the equivalent element already in the set.
-                The pair::second element in the pair is set to true if a new element was inserted or false if an equivalent element already existed.
+        1. insert(key, gender, height, weight) : add data into your RBTree and return bool
+            Returned bool:
+                The element is set to true if a new element was inserted or false if an equivalent element already existed.
         2. operator "[]"    : return node by selected key
     For each node, 3 member functions you need to implement as belows:
         3. getGender()      : return gender by node
@@ -76,7 +75,7 @@ int main()
     // you can test your implementation by this segment of code to avoid collision happened.
     srand(time(NULL));
     int repeat = 0;
-    std::pair<int, bool> ret;
+    bool ret;
 
     for (int i = 0; i < 5000000; i++)
     {
@@ -93,7 +92,7 @@ int main()
         testCases.push_back(key);
 
         // collision happen
-        if (ret.second == false)
+        if (ret == false)
             repeat++;
     }
     // You should not get repeat > 0
