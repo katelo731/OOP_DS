@@ -19,3 +19,6 @@
     In this homework, you can define your own RBtree.h without any limitation. 
     But you cannot change the codes in the main.cpp.
 
+    - testCase only collect non-collision keys.
+    - repeat will > 0 because of collisions.
+
