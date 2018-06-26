@@ -33,8 +33,8 @@ class RBTree
 		void right_rotate(Node *x);
 		bool insert(int k,string g,int h,int w);
 		Node &operator[](int k);
-		void display();
-		void display(Node *n);
+		//void display();
+		//void display(Node *n);
 	private:
 		Node *root;
 };
