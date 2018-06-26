@@ -150,7 +150,8 @@ void RBTree::display()
 void RBTree::display(Node *n)
 {
 	if(n->left) display(n->left);
-	cout << setw(8) << n->key << setw(10) << n->gender << setw(8) << n->height << setw(8) << n->weight << setw(8) << ((n->color==0)? 'R' : 'B') << endl;
+	cout << setw(8) << n->key << setw(10) << n->gender << setw(8) << n->height 
+	     << setw(8) << n->weight << setw(8) << ((n->color==0)? 'R' : 'B') << endl;
 	if(n->right) display(n->right);
 }
 */
