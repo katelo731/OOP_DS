@@ -10,9 +10,9 @@
 #include <vector>
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // Please implement RBTree class in separate header and cpp file (RBTree.h and RBTree.cpp)          //
-// And you should not modify any codes in main.cpp file.                                                //
+// And you should not modify any codes in main.cpp file.                                            //
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-// #include "RBTree.h"
+#include "RBTree.h"
 
 using namespace std;
 
@@ -88,19 +88,22 @@ int main()
 
         // insert
         ret = rbTree.insert(key, sex, height, weight);
-        // collect evaluated test cases
-        testCases.push_back(key);
 
         // collision happen
         if (ret == false)
             repeat++;
+        else
+            // collect evaluated test cases
+            testCases.push_back(key);
     }
-    // You should not get repeat > 0
+    // (updated) repeat will > 0 because of collisions
     cout << repeat << endl;
 
     // Evauluate the speed of your RBTree
     auto totalCost = measure<std::chrono::nanoseconds>::execution(EvaluateFunc, rbTree, testCases);
     cout << "Mean: " << totalCost / testCases.size() << " ns" << endl;
-
+    
+    cout << endl;
+    rbTree.display();
     return 0;
 }
