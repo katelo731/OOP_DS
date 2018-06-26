@@ -103,7 +103,7 @@ int main()
     auto totalCost = measure<std::chrono::nanoseconds>::execution(EvaluateFunc, rbTree, testCases);
     cout << "Mean: " << totalCost / testCases.size() << " ns" << endl;
     
-    cout << endl;
-    rbTree.display();
+    //cout << endl;
+    //rbTree.display();
     return 0;
 }
