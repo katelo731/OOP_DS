@@ -50,7 +50,6 @@ bool RBTree::insert(int k,string g,int h,int w)
 	Node *n, *p, *z, *u;
 	p = NULL;
 	n = root;
-	bool colli = false;
 	
 	while(n)
 	{
